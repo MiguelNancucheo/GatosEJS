@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Detalle </title>
+</head>
+<body>
+    <h1 class="detalle">Details Page de <%= arr.name %></h1>
+    <div class="img">
+        <img src="/imagenes/<%= arr.imagen %>" alt="<%= arr.imagen %>">
+    </div>
+    <div class="linea01">
+        <h3>Favorite food: <%= arr.favorid_food %></h3>
+    </div>
+    <div class="linea02">
+        <h3>age: <%= arr.age %> </h3>
+    </div>
+    <div class="linea03">
+        <h3>Sleeping Spots: </h3>
+        <% for (let x in arr.sleeping )  { %>
+        <p><%= arr.sleeping[x] %></p>
+        <% } %>
+    </div>
+</body>
+</html>
